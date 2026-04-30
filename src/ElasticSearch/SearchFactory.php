@@ -106,7 +106,7 @@ final class SearchFactory
                 if (! ($where instanceof BuilderInterface)) {
                     $where = new TermQuery((string) $field, $where);
                 }
-                $boolQuery->add($value, BoolQuery::FILTER);
+                $boolQuery->add($where, BoolQuery::FILTER);
             }
         }
 
